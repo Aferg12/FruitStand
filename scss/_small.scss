@@ -1,0 +1,109 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+
+/*----------- BODY --------------*/
+body {
+    font-size: 16px;
+    font-family: Verdana, sans-serif;
+}
+
+div#headWrapper {
+    background-color: rgb(191,231,207);
+}
+/*----------- HEADER --------------*/
+
+
+header {
+    padding: .5rem 2%;
+    background-color: rgb(191, 231, 207);
+    display:grid;
+    grid-template-columns:125px auto ;
+}
+header h1 {margin: 0; font-size: 1.5rem;  margin-top: .5rem;}
+header h2 {margin: 0; font-weight: normal;}
+
+div#navWrapper {
+    background-color: $menuColor;
+
+}
+nav {
+    background-color: $menuColor;
+}
+
+
+
+
+/*----------- NAVIGATION --------------*/
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+}
+
+nav ul li a {
+    display: flex;
+    justify-content: flex-end;
+    background-color: darken($menuColor, 10%);
+    color: #eee;
+    border-left: 1px solid #777;
+    padding: .5rem 2vw;
+    text-decoration: none;
+    font-size: 1.2rem;
+    
+}
+nav ul li:first-child a {border-left: none;}
+
+nav ul li a:hover {
+    background-color: lighten($menuColor, 20%);
+    color: #333;
+}
+nav ul li.active a {
+    background-color: darken($menuColor, 20%);
+    color: #fff;
+}
+/*----------- MAIN --------------*/
+main {
+    padding: 0 2%;
+    min-height: 10rem;
+}
+
+div.familyGallery {
+    display:flex;
+    flex-wrap: wrap;
+}
+
+div.familyGallery figure{
+    flex-basis: 46%;
+    margin: 1rem 2%;
+}
+
+div.familyGallery figure img{
+    width: 100%;
+}
+
+/*----------- FOOTER --------------*/
+
+
+div#footer {
+    background-color:lighten($menuColor, 13%);
+}
+footer {
+    
+    padding: .5rem 2%;
+    text-align: center;
+}
+
+
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
